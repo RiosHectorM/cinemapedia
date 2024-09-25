@@ -13,6 +13,8 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: _HomeView(),
       ),
+      drawer: Text('Menu Drawer Pelis'),
+      floatingActionButton: Text('Pelis'),
       bottomNavigationBar: CustomBottomNavigation(),
     );
   }
