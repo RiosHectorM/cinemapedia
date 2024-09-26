@@ -13,8 +13,6 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: _HomeView(),
       ),
-      drawer: Text('Menu Drawer Pelis'),
-      floatingActionButton: Text('Pelis'),
       bottomNavigationBar: CustomBottomNavigation(),
     );
   }
@@ -45,7 +43,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
     final topRatedMovies = ref.watch(topRatedMoviesProvider);
     final upcomingMovies = ref.watch(upcomingMoviesProvider);
 
-    if (nowPlayingMovies.isEmpty) return const CircularProgressIndicator();
+    return const FullScreenLoader();
     return CustomScrollView(
       slivers: [
         const SliverAppBar(
